@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="filters">
+      <form onsubmit="handleForm(event)">
+        <fieldset id="text-form">
+          <label>Название города:</label>
+          <input type="text" placeholder="Ищи по названию города..." />
+        </fieldset>
+        <fieldset id="sampling-form">
+          <legend id="container-header">Размер города</legend>
+          <div class="option"><input type="radio" /><label>Любой</label></div>
+          <div class="option">
+            <input type="radio" /><label>0 - 100тыс</label>
+          </div>
+          <div class="option">
+            <input type="radio" /><label>100тыс - 500тыс</label>
+          </div>
+          <div class="option">
+            <input type="radio" /><label>500тыс - 1млн</label>
+          </div>
+          <div class="option"><input type="radio" /><label>1млн +</label></div>
+        </fieldset>
+      </form>
+      <button id="filter">Фильровать!</button>
+    </section>
+    <table id="table">
+      <thead>
+        <tr>
+          <th>Город (число городов: <span id="counter"></span>)</th>
+          <th>Население</th>
+          <th>Лет городу</th>
+        </tr>
+      </thead>
+      <tbody id="table-data"></tbody>
+    </table>
+    <div class="loader"><img src="./loading.png" id="loader" /></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
