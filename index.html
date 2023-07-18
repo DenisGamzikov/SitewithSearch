@@ -9,27 +9,58 @@
   </head>
   <body>
     <section id="filters">
-      <form onsubmit="handleForm(event)">
+      <form onsubmit="filter(event)">
         <fieldset id="text-form">
-          <label>Название города:</label>
-          <input type="text" placeholder="Ищи по названию города..." />
+          <label for="text-search">Название города:</label>
+          <input
+            type="text"
+            name="cityName"
+            placeholder="Ищи по названию города..."
+            id="text-search"
+          />
         </fieldset>
         <fieldset id="sampling-form">
           <legend id="container-header">Размер города</legend>
-          <div class="option"><input type="radio" /><label>Любой</label></div>
           <div class="option">
-            <input type="radio" /><label>0 - 100тыс</label>
+            <input type="radio" name="filterPopulation" id="anyCity" /><label
+              for="anyCity"
+              >Любой</label
+            >
           </div>
           <div class="option">
-            <input type="radio" /><label>100тыс - 500тыс</label>
+            <input type="radio" name="filterPopulation" id="littleCity" /><label
+              for="littleCity"
+              >0 - 100тыс</label
+            >
           </div>
           <div class="option">
-            <input type="radio" /><label>500тыс - 1млн</label>
+            <input
+              type="radio"
+              name="filterPopulation"
+              id="averageCity"
+            /><label
+              for="
+            averageCity"
+              >100тыс - 500тыс</label
+            >
           </div>
-          <div class="option"><input type="radio" /><label>1млн +</label></div>
+          <div class="option">
+            <input
+              type="radio"
+              name="filterPopulation"
+              id="aboveAverageCity"
+            /><label for="aboveAverageCity">500тыс - 1млн</label>
+          </div>
+          <div class="option">
+            <input type="radio" name="filterPopulation" id="bigCity" /><label
+              for="bigCity"
+              >1млн +</label
+            >
+          </div>
         </fieldset>
+
+        <button id="filter" type="submit">Фильровать!</button>
       </form>
-      <button id="filter">Фильровать!</button>
     </section>
     <table id="table">
       <thead>
