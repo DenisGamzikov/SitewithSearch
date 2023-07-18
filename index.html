@@ -22,22 +22,23 @@
         <fieldset id="sampling-form">
           <legend id="container-header">Размер города</legend>
           <div class="option">
-            <input type="radio" name="filterPopulation" id="anyCity" /><label
+            <input type="radio" name="filterPopulation" value="anyCity" /><label
               for="anyCity"
               >Любой</label
-            >
-          </div>
-          <div class="option">
-            <input type="radio" name="filterPopulation" id="littleCity" /><label
-              for="littleCity"
-              >0 - 100тыс</label
             >
           </div>
           <div class="option">
             <input
               type="radio"
               name="filterPopulation"
-              id="averageCity"
+              value="littleCity"
+            /><label for="littleCity">0 - 100тыс</label>
+          </div>
+          <div class="option">
+            <input
+              type="radio"
+              name="filterPopulation"
+              value="averageCity"
             /><label
               for="
             averageCity"
@@ -48,18 +49,18 @@
             <input
               type="radio"
               name="filterPopulation"
-              id="aboveAverageCity"
+              value="aboveAverageCity"
             /><label for="aboveAverageCity">500тыс - 1млн</label>
           </div>
           <div class="option">
-            <input type="radio" name="filterPopulation" id="bigCity" /><label
+            <input type="radio" name="filterPopulation" value="bigCity" /><label
               for="bigCity"
               >1млн +</label
             >
           </div>
         </fieldset>
 
-        <button id="filter" type="submit">Фильровать!</button>
+        <button id="event" type="submit">Фильровать!</button>
       </form>
     </section>
     <table id="table">
