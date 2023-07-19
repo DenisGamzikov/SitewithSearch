@@ -3,7 +3,9 @@ function filter(event) {
   const formData = new FormData(event.target);
   const filterPopulation = formData.get("filterPopulation");
   const citySize = formData.get("citySize");
+  console.log(filterPopulation);
 }
+
 const loaderEl = document.getElementById("loader");
 const spanEl = document.getElementById("counter");
 function loadingData() {
