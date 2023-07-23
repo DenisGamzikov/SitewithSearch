@@ -23,7 +23,7 @@ body {
 .option {
   text-align: left;
 }
-#filter {
+#event {
   display: block;
   margin: 20px 0 0 auto;
 }
@@ -38,7 +38,6 @@ body {
   border-collapse: collapse;
 }
 table thead {
-  position: sticky;
   background-color: rgb(255, 207, 118);
   border-bottom: 1px solid black;
 }
@@ -64,4 +63,11 @@ table thead {
 th,
 td {
   padding: 2px 4px;
+  border: 1px solid #000000;
+}
+.active-tr {
+  background-color: transparent;
+}
+.unactive-tr {
+  background-color: transparent;
 }
